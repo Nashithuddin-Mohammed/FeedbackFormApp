@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/home.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">FeedbackForm</a>
+            <a class="btn btn-primary" href="/register" role="button">Register</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Login</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="loginInputEmail" class="form-label">Enter your SMU Email address</label>
+                        <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp"
+                            pattern=".+@smu.edu" oninvalid="alert('Enter valid email address (@smu.edu)')" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginInputPass" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginInputPass" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

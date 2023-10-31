@@ -1,0 +1,30 @@
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    min-height: 100% !important;
+    min-width: 100% !important;
+    padding: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+/* .emailerror {
+    visibility: hidden;
+}
+
+[aria-invalid="true"]~.emailerror {
+    visibility: visible;
+} */
+
+/* .card {
+    height: 60%;
+} */
+
+.card-title {
+    align-content: center;
+}
