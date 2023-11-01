@@ -19,26 +19,26 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">FeedbackForm</h5>
-                <form>
+                <form action="/feedback/setFeedback" method="POST">
                     <div class="mb-3">
                         <label for="inputSMUID" class="form-label">SMU ID</label>
                         <input type="number" class="form-control" id="inputSMUID" aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputProfName" class="form-label">Name of the Professor</label>
-                        <input type="password" class="form-control" id="inputProfName" required>
+                        <input type="text" class="form-control" id="inputProfName" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputCourseTitle" class="form-label">Course Title</label>
-                        <input type="password" class="form-control" id="inputCourseTitle" required>
+                        <input type="text" class="form-control" id="inputCourseTitle" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputCourseCode" class="form-label">Course Code</label>
-                        <input type="password" class="form-control" id="inputCourseCode" required>
+                        <input type="text" class="form-control" id="inputCourseCode" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputFeedback" class="form-label">Feedback</label>
-                        <input type="password" class="form-control" id="inputFeedback" required>
+                        <input type="text" class="form-control" id="inputFeedback" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
