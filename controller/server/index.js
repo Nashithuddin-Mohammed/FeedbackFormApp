@@ -9,7 +9,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/feedbackdb').then(() => { console.lo
 
 app.set('views', path.join(__dirname, '..', '..', 'views'))
 app.use(express.static(path.join(__dirname, '..', '..', 'public')))
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded())
 app.use(bodyParser.json())
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', '..', 'views', 'feedback.html'))
