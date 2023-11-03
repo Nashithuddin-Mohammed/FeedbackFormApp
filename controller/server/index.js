@@ -4,21 +4,22 @@ const port = 3000
 const path = require('path')
 const mongoose = require('mongoose')
 const feedbackRoute = require('./routes/feedbackRoute')
+const homeRoute = require('./routes/homeRoute')
 const bodyParser = require('body-parser')
 mongoose.connect('mongodb://127.0.0.1:27017/feedbackdb').then(() => { console.log('Connection Established') }).catch(err => { console.log('Connection Failed'); console.log(err) });
 
+app.set('view engine', 'ejs')
+console.log(path.join(__dirname, '..', '..', 'views'))
 app.set('views', path.join(__dirname, '..', '..', 'views'))
 app.use(express.static(path.join(__dirname, '..', '..', 'public')))
 app.use(bodyParser.urlencoded())
 app.use(bodyParser.json())
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', '..', 'views', 'feedback.html'))
-})
+app.use('/', homeRoute)
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', '..', 'views', 'login.html'))
+    res.render('login')
 })
 app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', '..', 'views', 'register.html'))
+    res.render('register')
 })
 app.use('/feedback', feedbackRoute)
 

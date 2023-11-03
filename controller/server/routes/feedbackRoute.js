@@ -1,16 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const Feedback = require('../../../models/feedback')
-const path = require('path')
 
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', '..', '..', 'views', 'feedbackform.html'))
-})
-
-router.get('/getFeedback', async (req, res) => {
-    const feedbackData = await Feedback.find({})
-    res.sendFile(path.join(__dirname, '..', '..', '..', 'views', 'feedback.html'),
-        { data: feedbackData })
+    res.render('feedbackform')
 })
 
 router.post('/setFeedback', async (req, res) => {

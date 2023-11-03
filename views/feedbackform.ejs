@@ -22,23 +22,24 @@
                 <form action="/feedback/setFeedback" method="POST">
                     <div class="mb-3">
                         <label for="inputSMUID" class="form-label">SMU ID</label>
-                        <input type="number" class="form-control" id="inputSMUID" aria-describedby="emailHelp" required>
+                        <input name="smuid" type="number" class="form-control" id="inputSMUID"
+                            aria-describedby="emailHelp" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputProfName" class="form-label">Name of the Professor</label>
-                        <input type="text" class="form-control" id="inputProfName" required>
+                        <input name="profName" type="text" class="form-control" id="inputProfName" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputCourseTitle" class="form-label">Course Title</label>
-                        <input type="text" class="form-control" id="inputCourseTitle" required>
+                        <input name="courseTitle" type="text" class="form-control" id="inputCourseTitle" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputCourseCode" class="form-label">Course Code</label>
-                        <input type="text" class="form-control" id="inputCourseCode" required>
+                        <input name="courseCode" type="text" class="form-control" id="inputCourseCode" required>
                     </div>
                     <div class="mb-3">
                         <label for="inputFeedback" class="form-label">Feedback</label>
-                        <input type="text" class="form-control" id="inputFeedback" required>
+                        <input name="feedback" type="text" class="form-control" id="inputFeedback" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

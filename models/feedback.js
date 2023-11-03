@@ -7,6 +7,7 @@ const feedbackSchema = new Schema({
     courseTitle: String,
     courseCode: String,
     feedback: String,
+    updated: { type: Date, default: Date.now }
 })
 
 module.exports = mongoose.model('Feedback', feedbackSchema); 
