@@ -19,11 +19,13 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Register</h5>
-                <form class="needs-validation">
+                <form action="/register" method="POST" class="needs-validation"
+                    oninput='registerConfirmPass.setCustomValidity(registerConfirmPass.value != registerInputPass.value ? "Passwords do not match." : "")'>
                     <div class="mb-3">
                         <label for="registerInputEmail" class="form-label">Enter your SMU Email address</label>
-                        <input type="email" class="form-control" id="registerInputEmail" aria-describedby="emailHelp"
-                            pattern=".+@smu.edu" oninvalid="alert('Enter valid email address (@smu.edu)')" required />
+                        <input name="username" type="email" class="form-control" id="registerInputEmail"
+                            aria-describedby="emailHelp" pattern=".+@smu.edu"
+                            oninvalid="alert('Enter valid email address (@smu.edu)')" required />
                         <!-- <span class="emailerror" id="emailHelp">Enter valid email address (@smu.edu)</span> -->
                         <div class="invalid-feedback">
                             Enter valid email address (@smu.edu)
@@ -35,7 +37,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="registerConfirmPass" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="registerConfirmPass" required />
+                        <input name="password" type="password" class="form-control" id="registerConfirmPass" required />
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

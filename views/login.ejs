@@ -19,15 +19,16 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Login</h5>
-                <form>
+                <form action="/login" method="POST">
                     <div class="mb-3">
                         <label for="loginInputEmail" class="form-label">Enter your SMU Email address</label>
-                        <input type="email" class="form-control" id="loginInputEmail" aria-describedby="emailHelp"
-                            pattern=".+@smu.edu" oninvalid="alert('Enter valid email address (@smu.edu)')" required>
+                        <input name="username" type="email" class="form-control" id="loginInputEmail"
+                            aria-describedby="emailHelp" pattern=".+@smu.edu"
+                            oninvalid="alert('Enter valid email address (@smu.edu)')" required>
                     </div>
                     <div class="mb-3">
                         <label for="loginInputPass" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="loginInputPass" required>
+                        <input name="password" type="password" class="form-control" id="loginInputPass" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

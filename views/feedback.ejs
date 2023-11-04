@@ -13,14 +13,20 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">FeedbackForm</a>
-            <div class="d-flex">
+            <div id="feedbackDiv">
+                <a class="btn btn-primary" href="/feedback" role="button" id="feedbackLink">Feedback Form</a>
+            </div>
+            <div id="logoutDiv">
+                <a class="btn btn-primary" href="/logout" role="button" id="logoutLink">Logout</a>
+            </div>
+            <div id="loginDiv">
                 <a class="btn btn-primary me-2" href="/login" role="button">Login</a>
                 <a class="btn btn-primary" href="/register" role="button">Register</a>
             </div>
         </div>
     </nav>
     <div class="container">
-        <div class="card" style="width: 18rem;">
+        <div class="card feedbackcard" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Feedback</h5>
                 <table class="table" id="feedbackTable">
@@ -35,25 +41,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <% for(var i=0; i<data.length; i++) { %>
+                        <% for(var i=0; i<data.feedbackData.length; i++) { %>
                             <tr>
                                 <td>
-                                    <%= data[i].smuid %>
+                                    <%= data.feedbackData[i].smuid %>
                                 </td>
                                 <td>
-                                    <%= data[i].profName %>
+                                    <%= data.feedbackData[i].profName %>
                                 </td>
                                 <td>
-                                    <%= data[i].courseTitle %>
+                                    <%= data.feedbackData[i].courseTitle %>
                                 </td>
                                 <td>
-                                    <%= data[i].courseCode %>
+                                    <%= data.feedbackData[i].courseCode %>
                                 </td>
                                 <td>
-                                    <%= data[i].feedback %>
+                                    <%= data.feedbackData[i].feedback %>
                                 </td>
                                 <td>
-                                    <%= data[i].updated %>
+                                    <%= data.feedbackData[i].updated %>
                                 </td>
                             </tr>
                             <% } %>
@@ -63,6 +69,9 @@
         </div>
     </div>
 
+    <!-- <script>
+        var loggedIn = localStorage.getItem("loggedIn")
+    </script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
